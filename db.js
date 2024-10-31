@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const ObjectId=mongoose.Types.ObjectId;
-
+require("dotenv").config();
+const DB_URL = process.env.MONGO_DB_URL;
 mongoose.connect(
   
-     "mongodb+srv://ankush56086:alpha123456@cluster0.x3rwawu.mongodb.net/paytm-app"
+     DB_URL
 );
 
 const Userschema = mongoose.Schema({
