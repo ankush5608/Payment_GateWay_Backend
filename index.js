@@ -5,7 +5,7 @@ const bodyParser=require("body-parser")
 const jwt=require("jsonwebtoken")
 const app=express();
 require("dotenv").config(); 
-const Port=process.env.Port;
+const Port=process.env.Port || 3000;
 app.use(bodyParser.json());
 
 const cors=require("cors");
